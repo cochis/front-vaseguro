@@ -6,15 +6,55 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class HomeComponent implements OnInit {
-  display = false;
-  constructor() { }
+  public display: Boolean = false;
+  public init: any;
+  public cotizacion: Boolean;
+  
+  constructor() { 
+    
+  }
 
   ngOnInit() {
-    this.showDialog();
+    
+    this.cotizacion = localStorage.getItem('init');
+   console.log(this.cotizacion); // true
+
+  // console.log(typeof locura); // 'string'
+  //   this.cotizacion = this.getLocal('init');
+    
+      // console.log(this.cotizacion);
+      // console.log(JSON.stringify(locura));
+    if(this.cotizacion){
+      this.display = true;
+    }else {
+      this.display= false;
+
+    }
+    
   }
- 
 
   showDialog() {
-      this.display = true;
+    localStorage.setItem('init', false);
+    
+    // if (this.getLocal('init') === true ) {
+    //   this.display = true;
+    //   this.setLocal('init', this.init);
+    // }
   }
+  cotiza() {
+    localStorage.setItem('init', false);
+    this.display = false;
+  }
+  noCotiza() {
+    localStorage.setItem('init', false);
+    this.display = false;
+    
+  }
+  setLocal(key , value) {
+    localStorage.setItem(key, value);
+  }
+  getLocal(key) {
+    localStorage.getItem(key);
+  }
+
 }
