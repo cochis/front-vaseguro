@@ -1,98 +1,70 @@
-
 <div class="row">
     <div>
-      <div class="text-center">
-        <div class="col-md-12"><h1>Contáctanos</h1></div>
-             </div>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <h4 class=" col-md-8 dark text-justify">
-          Si quieres que nos comuniquemos contigo para realizar tu cotización con
-          nosotros, o pedir informacion de nuestros servicios y productos.
-        </h4>
-      </div>
+        <div class="text-center">
+            <div class="col-md-12">
+                <h1>Contáctanos</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <h4 class=" col-md-8 dark text-justify">
+                Si quieres que nos comuniquemos contigo para realizar tu cotización con nosotros, o pedir informacion de nuestros servicios y productos.
+            </h4>
+        </div>
     </div>
-  </div>
-  
-  <br /><br />
-  <div class="text-center">
+</div>
+
+<br /><br />
+<div class="text-center">
     <h2>Llena el formulario</h2>
     <p-messages [(value)]="msgs"></p-messages>
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contactForm title" >
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto.nombre" class="form-control" id="nombre" placeholder="Ingresa tu nombre"  required/>
-        <br>
-        <p-message *ngIf="nombre.touched && !nombre.valid" severity="error" text="El  campo de nombre es requerido"></p-message>
-        
-      </div>
-      <div class="form-group">
-        <label for="correo">Correo Electronico</label>
-        <input  type="email" name="correo" #correo="ngModel" [(ngModel)]="contacto.correo" class="form-control" id="correo" placeholder="Ingresa tu correo" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required/>
-        <br>
-        <p-message *ngIf="correo.touched && !correo.valid" severity="error" text="El  campo de correo no es valido"></p-message>
-        
-      </div>
-      <div class="form-group">
-        <label for="telefono">Telefono</label>
-        <input
-        name="telefono"
-        #telefono="ngModel"
-        [(ngModel)]="contacto.telefono"
-        type="text"
-        class="form-control"
-        id="telefono"
-        placeholder="Ingresa tu telefono"
-        maxlength="10"
-        minlength="8"
-        pattern="[0-9]+"
-        required
-        
-        />
-        <br>
-        <p-message *ngIf="telefono.touched && !telefono.valid" severity="error" text="El  campo de telefono no es valido"></p-message>
-        
-      </div>
-      <div class="form-group">
-        <label for="negocio">Negocio</label>
-        <select class="form-control"
-        name="negocio"
-        #negocio="ngModel"
-        [(ngModel)]="contacto.negocio"
-        type="text"
-        class="form-control"
-        id="negocio"
-        required
-        >
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contactForm title">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto.nombre" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required/>
+            <br>
+            <p-message *ngIf="nombre.touched && !nombre.valid" severity="error" text="El  campo de nombre es requerido"></p-message>
+
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo Electronico</label>
+            <input type="email" name="correo" #correo="ngModel" [(ngModel)]="contacto.correo" class="form-control" id="correo" placeholder="Ingresa tu correo" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required/>
+            <br>
+            <p-message *ngIf="correo.touched && !correo.valid" severity="error" text="El  campo de correo no es valido"></p-message>
+
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input name="telefono" #telefono="ngModel" [(ngModel)]="contacto.telefono" type="text" class="form-control" id="telefono" placeholder="Ingresa tu telefono" maxlength="10" minlength="8" pattern="[0-9]+" required />
+            <br>
+            <p-message *ngIf="telefono.touched && !telefono.valid" severity="error" text="El  campo de telefono no es valido"></p-message>
+
+        </div>
+        <div class="form-group">
+            <label for="negocio">Negocio</label>
+            <select class="form-control" name="negocio" #negocio="ngModel" [(ngModel)]="contacto.negocio" type="text" class="form-control" id="negocio" required>
           <option value="Au">Autos</option>
           <option value="gmm">GMM</option>
           <option value="Vi">Vida</option>
         </select>
-        <br>
-        <p-message *ngIf="negocio.touched && !negocio.valid" severity="error" text="El  campo de negocio es requerido"></p-message>
-        
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea class="form-control" 
-        name="mensaje"
-        #mensaje="ngModel"
-        [(ngModel)]="contacto.mensaje"
-        class="form-control"
-        id="mensaje"
-        placeholder="Ingresa tu mensaje" rows="3"
-        required></textarea>
-        <br>
-        <p-message *ngIf="mensaje.touched && !mensaje.valid" severity="error" text="El  campo de mensaje es requerido"></p-message>
-        
-      </div>
-      <div class="col-xs-12">
-          <!-- [disabled]="!contactForm.form.valid"   -->
-        <!-- Button -->
-        <a class="btn btn-primary"  (click)="onSubmit(contactForm)" >Enviar</a>
-        <!-- <button type="submit"  id="submit" name="submit" pButton label="Enviar" class="btn btn-primary" [disabled]="!contactForm.form.valid" ></button> -->
-       
+            <br>
+            <p-message *ngIf="negocio.touched && !negocio.valid" severity="error" text="El  campo de negocio es requerido"></p-message>
+
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea class="form-control" name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto.mensaje" class="form-control" id="mensaje" placeholder="Ingresa tu mensaje" rows="3" required></textarea>
+            <br>
+            <p-message *ngIf="mensaje.touched && !mensaje.valid" severity="error" text="El  campo de mensaje es requerido"></p-message>
+
+        </div>
+        <div class="col-xs-12">
+            <!-- [disabled]="!contactForm.form.valid"   -->
+            <!-- Button -->
+            <a class="btn btn-primary" (click)="onSubmit(contactForm)" *ngIf="contactForm.valid">Enviar</a>
+            <!-- <a class="btn btn-primary"  (click)="onSubmit(contactForm)" >Enviar</a> -->
+            <!-- <button type="submit"  id="submit" name="submit" pButton label="Enviar" class="btn btn-primary" [disabled]="!contactForm.form.valid" ></button> -->
+
         </div>
     </form>
-  </div>
-  
+</div>
