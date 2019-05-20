@@ -21,7 +21,7 @@ import { MessageService } from 'primeng/components/common/messageservice';
 export class ProductsComponent {
   cars: Car[];
   aseguradoras: Aseguradora[];
-
+  negocios: any;
   constructor(private messageService: MessageService) {
     this.aseguradoras = [
       {

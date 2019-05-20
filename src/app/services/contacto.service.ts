@@ -27,7 +27,7 @@ export class ContactoService {
         const params = JSON.stringify(fastCotizacion);
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
         const slide = 'api/';
-        return this._http.post(this.url + slide + 'send-fast    /', params, { headers: headers });
+        return this._http.post(this.url + slide + 'send-fast/', params, { headers: headers });
     }
 
 

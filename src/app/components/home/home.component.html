@@ -2,8 +2,8 @@
     <img src="assets/img/logo/vaseguroLogo_completo300px.png" width="200px" />
     <p class="lead"><b>Tranquilo, nosotros te cuídamos.</b></p>
     <p>Confía en nosotros</p>
-    <button class="btn btn-info btn-responsive btninter">Contactanos</button>
-    <button class="btn btn-info btn-responsive btninter right">Cotiza</button>
+    <button class="btn btn-info btn-responsive btninter" routerLink="/contacto"  >Contactanos</button>
+    <button class="btn btn-info btn-responsive btninter right" (click)="display = true">Cotiza</button>
 </div>
 <app-negocios></app-negocios>
 <p-dialog header="Cotiza en 30 segundos" [(visible)]="display" [modal]="true" [responsive]="true" [style]="{ width: '70%', minWidth: '500px' }" [minY]="100" [maximizable]="true" [baseZIndex]="10000">
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div style="width: 20% !important">
                         <label for="cp">Codigo Postal</label>
-                        <input type="number" name="cp" #cp="ngModel" [(ngModel)]="fastCotizacion.cp" class="form-control" id="cp" placeholder="Ingresa tu Codigo Postal" required />
+                        <input type="number" name="cp" #cp="ngModel" [(ngModel)]="fastCotizacion.cp" class="form-control" id="cp" min="0" max="99999" placeholder="" required />
                         <br />
                         <p-message *ngIf="cp.touched && !cp.valid" severity="error" text="El  campo de codigo postal es requerido"></p-message>
                     </div>
@@ -55,15 +55,15 @@
                     </div>
                     <div style="width: 20% !important">
                         <label for="version">Version</label>
-                        <input type="text" name="version" #version="ngModel" [(ngModel)]="fastCotizacion.version" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required />
+                        <input type="text" name="version" #version="ngModel" [(ngModel)]="fastCotizacion.version" class="form-control" id="version" placeholder="Ingresa tu version" required />
                         <br />
-                        <p-message *ngIf="version.touched && !version.valid" severity="error" text="El  campo de nombre es requerido"></p-message>
+                        <p-message *ngIf="version.touched && !version.valid" severity="error" text="El  campo de version es requerido"></p-message>
                     </div>
                     <div style="width: 20% !important">
                         <label for="subversion">Subversion</label>
-                        <input type="text" name="subversion" #subversion="ngModel" [(ngModel)]="fastCotizacion.subversion" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required />
+                        <input type="text" name="subversion" #subversion="ngModel" [(ngModel)]="fastCotizacion.subversion" class="form-control" id="subversion" placeholder="Ingresa tu subversion" required />
                         <br />
-                        <p-message *ngIf="subversion.touched && !subversion.valid" severity="error" text="El  campo de nombre es requerido"></p-message>
+                        <p-message *ngIf="subversion.touched && !subversion.valid" severity="error" text="El  campo de subversion es requerido"></p-message>
                     </div>
                 </div>
             </div>
