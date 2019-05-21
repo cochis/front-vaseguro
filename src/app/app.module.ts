@@ -57,6 +57,10 @@ import { PromotionsComponent } from './components/promotions/promotions.componen
 import { ContactoService } from './services/contacto.service';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { InicioComponent } from './components/intra/inicio/inicio.component';
+import { ErrorComponent } from './components/error/error.component';
+import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-intra.component';
 
 
 
@@ -74,7 +78,11 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     FooterComponent,
     AsideComponent,
     NegociosComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    InicioComponent,
+    ErrorComponent,
+    MenuIntraComponent
   ],
   imports: [
     BrowserModule,

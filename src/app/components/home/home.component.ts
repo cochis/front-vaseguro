@@ -12,22 +12,31 @@ export class HomeComponent implements OnInit {
   public init: any;
   public cotizacion: Boolean;
   public fastCotizacion: FastCotizacion;
-  public status : String;
-  public msgs : any;
+  public status: String;
+  public msgs: any;
   
-  constructor(private _contactoService : ContactoService) {
-    this.fastCotizacion = new FastCotizacion( '', 0, '', 0, '', '', false, false, false );
+  constructor(private _contactoService: ContactoService) {
+    this.fastCotizacion = new FastCotizacion('', 0, '', 0, '', '', false, false, false);
+
   }
   ngOnInit() {
-    this.display = true;
+    this.init = sessionStorage.getItem('cotizado');
+    if (!this.init) {
+      this.display = true;
+    } else {
+      this.display = false;
+    }
+
   }
   showDialog() {
   }
   cotiza() {
     this.display = false;
+    
   }
   noCotiza() {
     this.display = false;
+    sessionStorage.setItem('cotizado', 'true');
   }
   setLocal(key, value) {
     localStorage.setItem(key, value);
@@ -36,8 +45,6 @@ export class HomeComponent implements OnInit {
     localStorage.getItem(key);
   }
   onSubmit(form) {
-    console.log('entroa coti');
-    console.log(form.value);
     this._contactoService.sendFast(this.fastCotizacion).subscribe(
       response => {
         console.log(response);
@@ -45,6 +52,7 @@ export class HomeComponent implements OnInit {
           this.status = 'success';
           form.reset();
           this.showSuccess();
+          sessionStorage.setItem('cotizado', 'true');
         } else {
           this.status = 'failed';
           this.showError();
@@ -52,13 +60,14 @@ export class HomeComponent implements OnInit {
 
       },
       error => {
+        console.log(error);
         this.showError();
       }
     );
   }
   showSuccess() {
     this.msgs = [];
-    this.msgs.push({ severity: 'success', summary: this.fastCotizacion.version , detail: 'Su mensaje ha sido enviado' });
+    this.msgs.push({ severity: 'success', summary: this.fastCotizacion.version, detail: 'Su mensaje ha sido enviado' });
   }
   showError() {
     this.msgs = [];

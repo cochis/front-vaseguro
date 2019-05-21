@@ -33,6 +33,7 @@ export class ContactComponent implements OnInit {
 
 
   onSubmit(form) {
+    console.log(form.value);
     this._contactoService.sendContacto(this.contacto).subscribe(
       response => {
         if (response.contacto) {

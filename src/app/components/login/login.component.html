@@ -1,0 +1,45 @@
+<h1>Ingresar</h1>
+<hr>
+<div class="col-12" *ngIf="status == 'failed'">
+    <p-message severity="error" text="No se ha podido identificar"></p-message>
+
+</div>
+<div class="col-12" *ngIf="message">
+    <p-message severity="error" text="No se ha podido identificar"></p-message>
+
+</div>
+<div class="row justify-content-center">
+
+    <div class="col-12 text-center ustify-content-center">
+
+        <form class="p-4" form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+
+
+            <div class="ui-g-12 ui-md-12">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" pInputText placeholder="Usuario" type="email" name="usuario" #usuario="ngModel" [(ngModel)]="usuario.usuario" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-12">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
+                    <input type="text" pInputText placeholder="Contraseña" type="password" name="password" #password="ngModel" [(ngModel)]="usuario.password" required>
+                </div>
+            </div>
+            <div class="ui-g-12 ui-md-12">
+                <div class="ui-inputgroup">
+                    <button pButton type="submit" label="Ingresar"></button>
+
+                </div>
+            </div>
+            <input type="hidden" name="getToken">
+
+
+
+        </form>
+
+    </div>
+
+</div>

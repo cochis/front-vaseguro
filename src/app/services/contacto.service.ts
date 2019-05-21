@@ -19,15 +19,17 @@ export class ContactoService {
 
     sendContacto(contacto: Contacto): Observable<any> {
         const params = JSON.stringify(contacto);
+        console.log(params);
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
-        const slide = 'api/';
+        const slide = '';
         return this._http.post(this.url + slide + 'send-contacto/', params, { headers: headers });
     }
     sendFast(fastCotizacion: FastCotizacion): Observable<any> {
         const params = JSON.stringify(fastCotizacion);
+        console.log(params);
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
-        const slide = 'api/';
-        return this._http.post(this.url + slide + 'send-fast    /', params, { headers: headers });
+        const slide = '';
+        return this._http.post(this.url + slide + 'send-fast/', params, { headers: headers });
     }
 
 
