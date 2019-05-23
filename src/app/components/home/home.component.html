@@ -2,7 +2,7 @@
     <img src="assets/img/logo/vaseguroLogo_completo300px.png" width="200px" />
     <p class="lead"><b>Tranquilo, nosotros te cuídamos.</b></p>
     <p>Confía en nosotros</p>
-    <button class="btn btn-info btn-responsive btninter" routerLink="/contacto"  >Contactanos</button>
+    <button class="btn btn-info btn-responsive btninter" routerLink="/contacto">Contactanos</button>
     <button class="btn btn-info btn-responsive btninter right" (click)="display = true">Cotiza</button>
 </div>
 <app-negocios></app-negocios>
@@ -72,16 +72,18 @@
                         <p-message *ngIf="subversion.touched && !subversion.valid" severity="error" text="El  campo de subversion es requerido"></p-message>
                     </div>
                 </div>
-            </form>
-        </div>
-
-        <p-footer>
-            <a class="btn btn-primary" (click)="onSubmit(fastCotizacionForm)" *ngIf="fastCotizacionForm.valid ">Pide Cotizacion</a>
-            <!-- <button type="button" pButton icon="pi pi-check" (click)="onSubmit(fastCotizacionForm)" label="Pide Cotizacion"></button> -->
-            <button class="btn btn-info btn-responsive btninter right" (click)="noCotiza()" style="background: #44569c !important;">En otro momento</button>
-
-        </p-footer>
-
+            </div>
+        </form>
     </div>
+
+
+    <p-footer>
+        <a class="btn btn-primary" (click)="onSubmit(fastCotizacionForm)" *ngIf="fastCotizacionForm.valid ">Pide Cotizacion</a>
+        <!-- <button type="button" pButton icon="pi pi-check" (click)="onSubmit(fastCotizacionForm)" label="Pide Cotizacion"></button> -->
+        <button class="btn btn-info btn-responsive btninter right" (click)="noCotiza()" style="background: #44569c !important;">En otro momento</button>
+
+    </p-footer>
+
+
 
 </p-dialog>
