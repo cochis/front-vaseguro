@@ -117,10 +117,10 @@ h2 {}
 footer {
     padding-top: 180px;
     background: rgba(52, 58, 64, .6) !important;
-    position: fixed;
-    bottom: 0px;
+    /* position: fixed; */
+    /* bottom: 0px;
     left: 0px;
-    width: 100%;
+    width: 100%; */
 }
 
 
@@ -169,6 +169,52 @@ a.icono-red {
 }
 
 
+/*  Listas */
+
+#danos ul {
+    list-style: none !important;
+}
+
+#danos ul li {
+    margin-bottom: 15px !important;
+    text-align: justify;
+    font-size: 15px;
+}
+
+#danos ul ol {
+    list-style: none !important;
+}
+
+
+/* 
+#danos ul li {
+    font-family: Georgia, serif, Times !important;
+    font-size: 18px !important;
+    /* display: block !important;
+    width: 300px !important;
+    height: 28px !important;
+    background-color: #333 !important;
+    border-left: 5px solid #222 !important;
+    border-right: 5px solid #222 !important;
+    padding-left: 10px !important;
+    text-decoration: none !important;
+    color: #bfe1f1 !important; */
+
+
+/* 
+
+}
+#danos ul li:hover {
+    -moz-transform: rotate(-5deg) !important;
+    -moz-box-shadow: 10px 10px 20px #000000 !important;
+    -webkit-transform: rotate(-5deg);
+    -webkit-box-shadow: 10px 10px 20px #000000 !important;
+    transform: rotate(4deg) !important;
+    box-shadow: 10px 10px 20px #000000 !important;
+    margin-left: 10px !important;
+} */
+
+*/
 /*Botones*/
 
 a:hover.btn.btn-primary {

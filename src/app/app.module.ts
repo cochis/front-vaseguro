@@ -43,6 +43,7 @@ import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { MessageModule } from 'primeng/message';
 import {MessagesModule} from 'primeng/messages';
 import {DialogModule} from 'primeng/dialog';
+import {AccordionModule} from 'primeng/accordion';
 
 //Routes
 import { ROUTES } from './app.routes';
@@ -61,6 +62,7 @@ import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/intra/inicio/inicio.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-intra.component';
+import { AutosComponent } from './components/shared/negocios/autos/autos/autos.component';
 
 
 
@@ -82,7 +84,8 @@ import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-in
     LoginComponent,
     InicioComponent,
     ErrorComponent,
-    MenuIntraComponent
+    MenuIntraComponent,
+    AutosComponent
   ],
   imports: [
     BrowserModule,
@@ -120,7 +123,8 @@ import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-in
     MessageModule,
     HttpClientModule,
     MessagesModule,
-    DialogModule
+    DialogModule,
+    AccordionModule
   ],
   providers: [MessageService, ContactoService],
   bootstrap: [AppComponent]

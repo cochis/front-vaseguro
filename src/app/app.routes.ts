@@ -8,6 +8,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/intra/inicio/inicio.component';
 import { ErrorComponent } from './components/error/error.component';
+import { AutosComponent } from './components/shared/negocios/autos/autos/autos.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -19,6 +20,7 @@ export const ROUTES: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'error', component: ErrorComponent},
     {path: 'intra/home', component: InicioComponent},
+    {path: 'intra/negocios/autos', component: AutosComponent},
     {path: '', pathMatch:  'full', redirectTo: 'home'},
     {path: '**', pathMatch:  'full', redirectTo: 'error'}
 ];
