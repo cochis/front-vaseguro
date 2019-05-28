@@ -307,10 +307,16 @@ a.btn.btn-primary {
 .ng-tns-c3-6,
 .ng-tns-c3-7,
 .ng-tns-c3-8,
-.ng-tns-c3-9 {
+.ng-tns-c3-9,
+.ng-tns-c3-10,
+.ng-tns-c3-11 {
     background: #bf2f66 !important;
     color: #ffffff !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 25px !important;
+}
+
+.ng-tns-c3-11 {
+    margin-bottom: 100px !important;
 }
 
 @keyframes fadeIn {
