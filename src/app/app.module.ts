@@ -64,6 +64,7 @@ import { InicioComponent } from './components/intra/inicio/inicio.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-intra.component';
 import { AutosComponent } from './components/shared/negocios/autos/autos/autos.component';
+import { ServicesComponent } from './components/services/services.component';
 
 
 
@@ -86,7 +87,8 @@ import { AutosComponent } from './components/shared/negocios/autos/autos/autos.c
     InicioComponent,
     ErrorComponent,
     MenuIntraComponent,
-    AutosComponent
+    AutosComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

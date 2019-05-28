@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/intra/inicio/inicio.component';
 import { ErrorComponent } from './components/error/error.component';
 import { AutosComponent } from './components/shared/negocios/autos/autos/autos.component';
+import { ServicesComponent } from './components/services/services.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -16,6 +17,7 @@ export const ROUTES: Routes = [
     {path: 'productos', component: ProductsComponent},
     {path: 'promociones', component: PromotionsComponent},
     {path: 'cotizaciones', component: QuotationsComponent},
+    {path: 'servicios', component: ServicesComponent},
     {path: 'contacto', component: ContactComponent},
     {path: 'login', component: LoginComponent},
     {path: 'error', component: ErrorComponent},
