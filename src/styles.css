@@ -17,7 +17,32 @@ hr {
 }
 
 .puntero {
-    cursor: pointer;
+    text-align: center !important;
+    width: 100% !important;
+    cursor: pointer !important;
+}
+
+.puntero:hover {
+    background: #686868 !important;
+}
+
+.puntero:hover .image {
+    opacity: 0.3 !important;
+}
+
+.puntero:hover .middle {
+    opacity: 1 !important;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .img-circle {

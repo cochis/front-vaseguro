@@ -1,30 +1,28 @@
 <div class="extra" *ngIf="!logueado">
-<app-navbar></app-navbar>
-  <div class="container-fluid marginTop80">
-    <div classs="row" > 
-      <div class="col-12 col-md-8" style="float: left !important">
-          <router-outlet></router-outlet>
-      </div>
-      <div class="col-12  col-md-4 " style="float: right !important">
-        <app-aside></app-aside>
-        <br><br><br>
+    <app-navbar></app-navbar>
+    <div class="container-fluid marginTop80">
+        <div classs="row">
+            <div class="col-12 col-md-8" style="float: left !important">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="col-12  col-md-4 " style="float: right !important">
+                <app-aside></app-aside>
+                <br><br><br>
+            </div>
+
+        </div>
     </div>
-    
-  </div>
-</div>
-<div class="intra" *ngIf="logueado">
+    <div class="intra" *ngIf="!logueado">
 
-  <app-menu-intra></app-menu-intra>
+        <!-- <app-menu-intra></app-menu-intra> -->
 
-  <div class="container-fluid marginTop80">
-    <div classs="row" > 
-      <div class="col-12 col-md-8" style="float: left !important">
-          <router-outlet></router-outlet>
-      </div>
-          
-  </div>
-  
-  <app-footer></app-footer>
-</div>
+        <div class="container-fluid marginTop80">
+            <div classs="row">
+                <div class="col-12 col-md-8" style="float: left !important">
+                    <router-outlet></router-outlet>
+                </div>
 
+            </div>
 
+            <app-footer></app-footer>
+        </div>

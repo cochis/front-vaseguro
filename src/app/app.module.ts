@@ -44,6 +44,7 @@ import { MessageModule } from 'primeng/message';
 import {MessagesModule} from 'primeng/messages';
 import {DialogModule} from 'primeng/dialog';
 import {AccordionModule} from 'primeng/accordion';
+import {DataViewModule} from 'primeng/dataview';
 
 //Routes
 import { ROUTES } from './app.routes';
@@ -124,7 +125,8 @@ import { AutosComponent } from './components/shared/negocios/autos/autos/autos.c
     HttpClientModule,
     MessagesModule,
     DialogModule,
-    AccordionModule
+    AccordionModule,
+    DataViewModule
   ],
   providers: [MessageService, ContactoService],
   bootstrap: [AppComponent]
