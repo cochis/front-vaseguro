@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class PromotionsComponent implements OnInit {
 
   constructor() { }
-
+  window:any;
   ngOnInit() {
+    this.window = window.scroll(0,0);
   }
 
 }

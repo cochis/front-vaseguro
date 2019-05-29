@@ -2,7 +2,7 @@
 
 body {
     background-color: white;
-    color: #44569c !important;
+    color: #007ad9 !important;
     min-width: 410px;
     margin-bottom: 70px !important;
 }
@@ -47,17 +47,17 @@ hr {
 
 .img-circle {
     border-radius: 100%;
-    width: 150px;
+    width: 100px;
 }
 
 .card-header {
-    background: #44569c;
+    background: #007ad9;
     color: white;
 }
 
 .card-title,
 .card-text {
-    color: #44569c;
+    color: #007ad9;
 }
 
 .badge {
@@ -110,7 +110,7 @@ h1 {
     font-size: 50px !important;
     text-shadow: 6px 6px 6px #aaa !important;
     padding-top: 10px !important;
-    color: #44569C !important;
+    color: #007ad9 !important;
 }
 
 h2 {}
@@ -244,7 +244,7 @@ a.icono-red {
 /*Botones*/
 
 a:hover.btn.btn-primary {
-    background: #44569c !important;
+    background: #007ad9 !important;
     border: none !important;
 }
 
@@ -255,7 +255,7 @@ a.btn.btn-primary {
 }
 
 .active {
-    background: #44569c !important;
+    background: #007ad9 !important;
     border-radius: 10px;
 }
 
@@ -268,7 +268,7 @@ a.btn.btn-primary {
 }
 
 .custom .ui-scrollpanel-bar {
-    background-color: #44569c;
+    background-color: #007ad9;
     opacity: 1;
     transition: background-color .3s;
 }
@@ -283,7 +283,7 @@ a.btn.btn-primary {
 }
 
 .ui-fieldset-content-wrapper {
-    color: #44569c;
+    color: #007ad9;
 }
 
 .fas,
@@ -298,7 +298,8 @@ a.btn.btn-primary {
 
 /* //acordion   */
 
-.ng-tns-c3-1,
+
+/* .ng-tns-c3-1,
 .ng-tns-c3-2,
 .ng-tns-c3-3,
 .ng-tns-c3-,
@@ -309,14 +310,31 @@ a.btn.btn-primary {
 .ng-tns-c3-8,
 .ng-tns-c3-9,
 .ng-tns-c3-10,
-.ng-tns-c3-11 {
-    background: #bf2f66 !important;
+.ng-tns-c3-11,
+.ng-tns-c3-23,
+.ng-tns-c3-24,
+.ng-tns-c3-25,
+.ng-tns-c3-26,
+.ng-tns-c3-27,
+.ng-tns-c3-28,
+.ng-tns-c3-29,
+.ng-tns-c3-30,
+.ng-tns-c3-31,
+.ng-tns-c3-32,
+.ng-tns-c3-33 { */
+
+.ng-tns * {
+    background: #007ad9 !important;
     color: #ffffff !important;
     margin-bottom: 25px !important;
 }
 
 .ng-tns-c3-11 {
     margin-bottom: 100px !important;
+}
+
+.ui-accordion-header {
+    background: #686868 !important;
 }
 
 @keyframes fadeIn {

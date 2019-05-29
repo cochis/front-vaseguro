@@ -11,11 +11,13 @@ export class ProductsComponent {
  
   aseguradoras: Aseguradora[];
   negocios: any;
+  window: any;
   constructor(private messageService: MessageService) {
     
   }
  
   ngOnInit() {
+    this.window = window.scroll(0,0);
   }
 }
 

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html'
+  selector: 'app-inversion',
+  templateUrl: './inversion.component.html'
 })
-export class InicioComponent implements OnInit {
-window: any;
+export class InversionComponent implements OnInit {
+  window: any;
   constructor() { }
 
   ngOnInit() {

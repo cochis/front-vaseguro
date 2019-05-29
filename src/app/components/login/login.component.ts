@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   public message: string;
   public token: any;
   public res: any;
+  window: any;
   constructor(private _route: ActivatedRoute,
     private _router: Router,
     private _usuarioService: UsuarioService,
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.window = window.scroll(0,0);
   }
   onSubmit(form) {
     this._usuarioService.login(form.value)

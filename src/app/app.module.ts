@@ -63,8 +63,9 @@ import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/intra/inicio/inicio.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-intra.component';
-import { AutosComponent } from './components/shared/negocios/autos/autos/autos.component';
+import { AutosComponent } from './components/shared/negocios/autos/autos.component';
 import { ServicesComponent } from './components/services/services.component';
+import { InversionComponent } from './components/shared/negocios/inversion/inversion.component';
 
 
 
@@ -88,7 +89,8 @@ import { ServicesComponent } from './components/services/services.component';
     ErrorComponent,
     MenuIntraComponent,
     AutosComponent,
-    ServicesComponent
+    ServicesComponent,
+    InversionComponent
   ],
   imports: [
     BrowserModule,

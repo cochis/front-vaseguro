@@ -11,9 +11,11 @@ export class AppComponent implements OnInit {
   public usuario: any;
   public token: any;
   public logueado: Boolean;
+  window: any;
   constructor(private _sharedService: SharedService) { }
 
   ngOnInit() {
+    this.window = window.scroll(0,0);
     this.usuario = this._sharedService.getSession('usuario');
     this.token = this._sharedService.getSession('token');
    

@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
   public contacto: Contacto;
   public status: string;
   msgs: Message[] = [];
+  window: any;
   constructor(private _contactoService: ContactoService,
     private messageService: MessageService) {
     this.contacto = new Contacto('', '', '', '', '', '', '', false, false);
@@ -21,6 +22,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.window = window.scroll(0,0);
   }
   showSuccess() {
     this.msgs = [];
