@@ -66,6 +66,11 @@ import { MenuIntraComponent } from './components/intra/shared/menu-intra/menu-in
 import { AutosComponent } from './components/shared/negocios/autos/autos.component';
 import { ServicesComponent } from './components/services/services.component';
 import { InversionComponent } from './components/shared/negocios/inversion/inversion.component';
+import { MotosComponent } from './components/shared/negocios/motos/motos.component';
+import { PickupComponent } from './components/shared/negocios/pickup/pickup.component';
+import { CamionesComponent } from './components/shared/negocios/camiones/camiones.component';
+import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
+import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
 
 
 
@@ -90,7 +95,12 @@ import { InversionComponent } from './components/shared/negocios/inversion/inver
     MenuIntraComponent,
     AutosComponent,
     ServicesComponent,
-    InversionComponent
+    InversionComponent,
+    MotosComponent,
+    PickupComponent,
+    CamionesComponent,
+    TractocamionesComponent,
+    TaxiUberComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,11 @@ import { ErrorComponent } from './components/error/error.component';
 import { AutosComponent } from './components/shared/negocios/autos/autos.component';
 import { ServicesComponent } from './components/services/services.component';
 import { InversionComponent } from './components/shared/negocios/inversion/inversion.component';
+import { CamionesComponent } from './components/shared/negocios/camiones/camiones.component';
+import { MotosComponent } from './components/shared/negocios/motos/motos.component';
+import { PickupComponent } from './components/shared/negocios/pickup/pickup.component';
+import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
+import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -25,6 +30,11 @@ export const ROUTES: Routes = [
     {path: 'intra/home', component: InicioComponent},
     {path: 'negocios/autos', component: AutosComponent},
     {path: 'negocios/inversion', component: InversionComponent},
+    {path: 'negocios/carga', component: CamionesComponent},
+    {path: 'negocios/motos', component: MotosComponent},
+    {path: 'negocios/pickups', component: PickupComponent},
+    {path: 'negocios/tractocamiones', component: TractocamionesComponent},
+    {path: 'negocios/taxi-uber', component: TaxiUberComponent},
     {path: '', pathMatch:  'full', redirectTo: 'home'},
     {path: '**', pathMatch:  'full', redirectTo: 'error'}
 ];
