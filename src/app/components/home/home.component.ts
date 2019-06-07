@@ -14,13 +14,14 @@ export class HomeComponent implements OnInit {
   public fastCotizacion: FastCotizacion;
   public status: String;
   public msgs: any;
-  window:any;
+  showaviso: boolean = false;
+  window: any;
   constructor(private _contactoService: ContactoService) {
     this.fastCotizacion = new FastCotizacion('', 0, '', 0, '', '', false, false, false);
 
   }
   ngOnInit() {
-    this.window = window.scroll(0,0);
+    this.window = window.scroll(0, 0);
     this.init = sessionStorage.getItem('cotizado');
     if (!this.init) {
       this.display = true;
@@ -31,9 +32,13 @@ export class HomeComponent implements OnInit {
   }
   showDialog() {
   }
+  avisoPrivacidad() {
+    console.log('aviso');
+    this.showaviso = true;
+  }
   cotiza() {
     this.display = false;
-    
+
   }
   noCotiza() {
     this.display = false;

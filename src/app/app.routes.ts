@@ -16,6 +16,7 @@ import { MotosComponent } from './components/shared/negocios/motos/motos.compone
 import { PickupComponent } from './components/shared/negocios/pickup/pickup.component';
 import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
 import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
+import { AvisoComponent } from './components/shared/aviso/aviso.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -26,6 +27,7 @@ export const ROUTES: Routes = [
     {path: 'servicios', component: ServicesComponent},
     {path: 'contacto', component: ContactComponent},
     {path: 'login', component: LoginComponent},
+    {path: 'aviso', component: AvisoComponent},
     {path: 'error', component: ErrorComponent},
     {path: 'intra/home', component: InicioComponent},
     {path: 'negocios/autos', component: AutosComponent},

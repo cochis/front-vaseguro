@@ -295,6 +295,19 @@ a.btn.btn-primary {
     margin-bottom: 100px;
 }
 
+p {
+    color: black !important;
+}
+
+ul {
+    list-style: none !important;
+    font-style: italic;
+}
+
+ul li ul {
+    color: black !important;
+}
+
 
 /* //acordion   */
 

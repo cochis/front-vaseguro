@@ -71,6 +71,7 @@ import { PickupComponent } from './components/shared/negocios/pickup/pickup.comp
 import { CamionesComponent } from './components/shared/negocios/camiones/camiones.component';
 import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
 import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
+import { AvisoComponent } from './components/shared/aviso/aviso.component';
 
 
 
@@ -100,7 +101,8 @@ import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-u
     PickupComponent,
     CamionesComponent,
     TractocamionesComponent,
-    TaxiUberComponent
+    TaxiUberComponent,
+    AvisoComponent
   ],
   imports: [
     BrowserModule,
@@ -141,7 +143,7 @@ import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-u
     DialogModule,
     AccordionModule,
     DataViewModule
-  ],
+      ],
   providers: [MessageService, ContactoService],
   bootstrap: [AppComponent]
 })

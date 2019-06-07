@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contacto } from '../../models/contacto';
 import { ContactoService } from '../../services/contacto.service';
-import { SelectItem } from 'primeng/components/common/api';
 import { Message } from 'primeng/components/common/api';
 import { MessageService } from 'primeng/components/common/messageservice';
 

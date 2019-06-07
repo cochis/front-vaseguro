@@ -71,6 +71,7 @@
                         <br />
                         <p-message *ngIf="subversion.touched && !subversion.valid" severity="error" text="El  campo de subversion es requerido"></p-message>
                     </div>
+                    <button type="button" (click)="avisoPrivacidad()" pButton icon="pi pi-info-circle" label="Acepta terminos y condiciones" class="btn btn-info btn-responsive btninter center"></button>
                 </div>
             </div>
         </form>
@@ -86,4 +87,13 @@
 
 
 
+</p-dialog>
+
+
+
+
+
+
+<p-dialog header="Terminos y aviso de privacidad" [(visible)]="showaviso" [modal]="true" [responsive]="true" [style]="{ width: '70%', minWidth: '500px' }" [minY]="100" [maximizable]="true" [baseZIndex]="10000">
+    <app-aviso></app-aviso>
 </p-dialog>
