@@ -2,6 +2,8 @@
 export class FastCotizacion {
     constructor(
         public _id: string,
+        public nombre:string,
+        public telefono: string,
         public cp: number,
         public marca: string,
         public modelo: number,

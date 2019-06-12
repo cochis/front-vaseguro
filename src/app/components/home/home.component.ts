@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   public aviso: boolean=false;
   constructor(private _contactoService: ContactoService,
     private _sharedService: SharedService) {
-    this.fastCotizacion = new FastCotizacion('', 0, '', 0, '', '', false, false, false);
+    this.fastCotizacion = new FastCotizacion('','','', 0, '', 0, '', '', false, false, false);
 
   }
   ngOnInit() {
