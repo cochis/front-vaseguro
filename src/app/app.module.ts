@@ -72,6 +72,10 @@ import { CamionesComponent } from './components/shared/negocios/camiones/camione
 import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
 import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
 import { AvisoComponent } from './components/shared/aviso/aviso.component';
+import { SiniestrosComponent } from './components/shared/anuncios/siniestros/siniestros.component';
+import { VidaComponent } from './components/shared/negocios/vida/vida.component';
+import { GmmComponent } from './components/shared/negocios/gmm/gmm.component';
+import { HogarComponent } from './components/shared/negocios/hogar/hogar.component';
 
 
 
@@ -102,7 +106,11 @@ import { AvisoComponent } from './components/shared/aviso/aviso.component';
     CamionesComponent,
     TractocamionesComponent,
     TaxiUberComponent,
-    AvisoComponent
+    AvisoComponent,
+    SiniestrosComponent,
+    VidaComponent,
+    GmmComponent,
+    HogarComponent
   ],
   imports: [
     BrowserModule,

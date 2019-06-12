@@ -43,7 +43,7 @@
                 <div class="row">
                     <div style="width: 20% !important">
                         <label for="cp">Codigo Postal</label>
-                        <input type="number" name="cp" #cp="ngModel" [(ngModel)]="fastCotizacion.cp" class="form-control" id="cp" min="0" max="99999" placeholder="" required />
+                        <input type="text" name="cp" #cp="ngModel" [(ngModel)]="fastCotizacion.cp" class="form-control" id="cp" minlength="5" maxlength="5" placeholder="Ingresa tu Codigo Postal" pattern="[0-9]*" required />
                         <br />
                         <p-message *ngIf="cp.touched && !cp.valid" severity="error" text="El  campo de codigo postal es requerido"></p-message>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div style="width: 20% !important">
                         <label for="modelo">Modelo</label>
-                        <input type="number" name="modelo" #modelo="ngModel" [(ngModel)]="fastCotizacion.modelo" class="form-control" id="modelo" placeholder="Ingresa tu modelo" required />
+                        <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="fastCotizacion.modelo" class="form-control" id="modelo" minlength="4" maxlength="4" placeholder="Ingresa tu modelo" pattern="[0-9]*" required />
                         <br />
                         <p-message *ngIf="modelo.touched && !modelo.valid" severity="error" text="El  campo de modelo es requerido"></p-message>
                     </div>
@@ -71,7 +71,7 @@
                         <br />
                         <p-message *ngIf="subversion.touched && !subversion.valid" severity="error" text="El  campo de subversion es requerido"></p-message>
                     </div>
-                    <button type="button" (click)="avisoPrivacidad()" pButton icon="pi pi-info-circle" label="Acepta terminos y condiciones" class="btn btn-info btn-responsive btninter center"></button>
+                    <!-- <button type="button" (click)="avisoPrivacidad()" pButton icon="pi pi-info-circle" label="Acepta terminos y condiciones" class="btn btn-info btn-responsive btninter center"></button> -->
                 </div>
             </div>
         </form>
@@ -93,7 +93,7 @@
 
 
 
-
-<p-dialog header="Terminos y aviso de privacidad" [(visible)]="showaviso" [modal]="true" [responsive]="true" [style]="{ width: '70%', minWidth: '500px' }" [minY]="100" [maximizable]="true" [baseZIndex]="10000">
+<!-- 
+<p-dialog header="Terminos y aviso de privacidad" [(visible)]="showaviso" [modal]="true" [responsive]="true" [blockScroll]="false" [style]="{ width: '70%', minWidth: '500px' }" [minY]="100" [maximizable]="true" [baseZIndex]="10000">
     <app-aviso></app-aviso>
-</p-dialog>
+</p-dialog> -->

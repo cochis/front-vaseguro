@@ -6,7 +6,9 @@ import { Global } from './global';
 import { FastCotizacion } from '../models/fastCotizacion';
 
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class ContactoService {
     public url: string;
 
@@ -18,9 +20,11 @@ export class ContactoService {
 
 
     sendContacto(contacto: Contacto): Observable<any> {
+        console.log(contacto);
         const params = JSON.stringify(contacto);
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
         const slide = 'send-contacto/';
+        console.log(this.url + slide);
         return this._http.post(this.url + slide , params, { headers: headers });
     }
     sendFast(fastCotizacion: FastCotizacion): Observable<any> {

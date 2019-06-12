@@ -17,6 +17,10 @@ import { PickupComponent } from './components/shared/negocios/pickup/pickup.comp
 import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
 import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
 import { AvisoComponent } from './components/shared/aviso/aviso.component';
+import { SiniestrosComponent } from './components/shared/anuncios/siniestros/siniestros.component';
+import { VidaComponent } from './components/shared/negocios/vida/vida.component';
+import { GmmComponent } from './components/shared/negocios/gmm/gmm.component';
+import { HogarComponent } from './components/shared/negocios/hogar/hogar.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -37,6 +41,10 @@ export const ROUTES: Routes = [
     {path: 'negocios/pickups', component: PickupComponent},
     {path: 'negocios/tractocamiones', component: TractocamionesComponent},
     {path: 'negocios/taxi-uber', component: TaxiUberComponent},
+    {path: 'negocios/vida', component: VidaComponent},
+    {path: 'negocios/gmm', component: GmmComponent},
+    {path: 'negocios/hogar', component: HogarComponent},
+    {path: 'anuncios/siniestros', component: SiniestrosComponent},
     {path: '', pathMatch:  'full', redirectTo: 'home'},
     {path: '**', pathMatch:  'full', redirectTo: 'error'}
 ];

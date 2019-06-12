@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../../services/shared';
 
 @Component({
   selector: 'app-aviso',
@@ -10,12 +11,15 @@ export class AvisoComponent implements OnInit {
   selectedCategories: string[] = ['Technology', 'Sports'];
 
   checked: any;
-  constructor() { }
+  constructor(private _sharedService: SharedService) { }
 
   ngOnInit() {
   }
-  onSubmit(form){
-    console.log(form.value);
+  onSubmit(aviso){
+    console.log(aviso);
+    this._sharedService.setLocal('aviso',aviso);
+    
+
     
   }
 
