@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FastCotizacion } from '../../models/fastCotizacion';
 import { ContactoService } from '../../services/contacto.service';
 import { SharedService } from '../../services/shared';
-
+import { NgxSoapService, Client, ISoapMethodResponse } from 'ngx-soap'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,11 +16,16 @@ export class HomeComponent implements OnInit {
   public status: String;
   public msgs: any;
   showaviso: boolean = false;
+  mensajeEnviado: boolean = false;
   window: any;
+
+
+  
+ 
   public aviso: boolean=false;
   constructor(private _contactoService: ContactoService,
     private _sharedService: SharedService) {
-    this.fastCotizacion = new FastCotizacion('','','', 0, '', 0, '', '', false, false, false);
+    this.fastCotizacion = new FastCotizacion('','','', '', '', '', '', '', false, false, false);
 
   }
   ngOnInit() {
@@ -53,12 +58,13 @@ export class HomeComponent implements OnInit {
     localStorage.getItem(key);
   }
   onSubmit(form) {
-    this.aviso =this._sharedService.getLocal('aviso');
-    console.log(this.aviso);
-    if (this.aviso = false) {
-      console.log('necesita aceptar los terminos');
+    // this.aviso =this._sharedService.getLocal('aviso');
+    // console.log(this.aviso);
+    // if (this.aviso = false) {
+    //   console.log('necesita aceptar los terminos');
 
-    } else {
+    // } else {
+      this.cotizacionQualitas(this.fastCotizacion);
       this._contactoService.sendFast(this.fastCotizacion).subscribe(
         response => {
           console.log(response);
@@ -79,18 +85,27 @@ export class HomeComponent implements OnInit {
         }
       );
 
-    }
+    // }
     
   }
   showSuccess() {
     this.msgs = [];
     this.msgs.push({ severity: 'success', summary: this.fastCotizacion.version, detail: 'Su mensaje ha sido enviado' });
     this.display = false;
+    this.mensajeEnviado = true;
 
   }
   showError() {
     this.msgs = [];
     this.msgs.push({ severity: 'error', summary: 'Error Message', detail: 'Validation failed' });
+  }
+
+  cotizacionQualitas(cotizacion) {
+
+
+    console.log(cotizacion);
+    return true;
+
   }
 
 }

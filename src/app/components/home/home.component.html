@@ -49,7 +49,7 @@
                     </div>
                     <div style="width: 40% !important; margin-left: 5% !important ;margin-right: 5% !important;">
                         <label for="telefono">Telefono</label>
-                        <input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="fastCotizacion.telefono" class="form-control" id="telefono" placeholder="Ingresa tu telefono" required />
+                        <input type="text" name="telefono" #telefono="ngModel" [(ngModel)]="fastCotizacion.telefono" class="form-control" id="telefono" placeholder="Ingresa tu telefono" pattern="[0-9]*" required />
                         <br />
                         <p-message *ngIf="telefono.touched && !telefono.valid" severity="error" text="El  campo de telefono es requerido"></p-message>
                     </div>
@@ -108,6 +108,9 @@
 
 
 
+<p-dialog header="Mensaje Enviado" [(visible)]="mensajeEnviado" [modal]="true" [responsive]="true" [blockScroll]="false" [style]="{ width: '70%', minWidth: '500px' }" [minY]="100" [maximizable]="true" [baseZIndex]="10000">
+    <p-messages [(value)]="msgs"></p-messages>
+</p-dialog>
 
 <!-- 
 <p-dialog header="Terminos y aviso de privacidad" [(visible)]="showaviso" [modal]="true" [responsive]="true" [blockScroll]="false" [style]="{ width: '70%', minWidth: '500px' }" [minY]="100" [maximizable]="true" [baseZIndex]="10000">
