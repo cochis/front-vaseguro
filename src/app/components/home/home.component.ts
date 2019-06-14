@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FastCotizacion } from '../../models/fastCotizacion';
 import { ContactoService } from '../../services/contacto.service';
 import { SharedService } from '../../services/shared';
-import { NgxSoapService, Client, ISoapMethodResponse } from 'ngx-soap'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -86,7 +85,7 @@ export class HomeComponent implements OnInit {
       );
 
     // }
-    
+     
   }
   showSuccess() {
     this.msgs = [];
