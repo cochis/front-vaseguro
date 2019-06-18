@@ -70,12 +70,13 @@ import { MotosComponent } from './components/shared/negocios/motos/motos.compone
 import { PickupComponent } from './components/shared/negocios/pickup/pickup.component';
 import { CamionesComponent } from './components/shared/negocios/camiones/camiones.component';
 import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
-import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
+import { TaxiComponent } from './components/shared/negocios/taxi/taxi.component';
 import { AvisoComponent } from './components/shared/aviso/aviso.component';
 import { SiniestrosComponent } from './components/shared/anuncios/siniestros/siniestros.component';
 import { VidaComponent } from './components/shared/negocios/vida/vida.component';
 import { GmmComponent } from './components/shared/negocios/gmm/gmm.component';
 import { HogarComponent } from './components/shared/negocios/hogar/hogar.component';
+import { UberComponent } from './components/shared/negocios/uber/uber.component';
 
 
 
@@ -105,12 +106,13 @@ import { HogarComponent } from './components/shared/negocios/hogar/hogar.compone
     PickupComponent,
     CamionesComponent,
     TractocamionesComponent,
-    TaxiUberComponent,
+    TaxiComponent,
     AvisoComponent,
     SiniestrosComponent,
     VidaComponent,
     GmmComponent,
-    HogarComponent
+    HogarComponent,
+    UberComponent
   ],
   imports: [
     BrowserModule,

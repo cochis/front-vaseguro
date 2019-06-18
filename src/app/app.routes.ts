@@ -15,13 +15,13 @@ import { CamionesComponent } from './components/shared/negocios/camiones/camione
 import { MotosComponent } from './components/shared/negocios/motos/motos.component';
 import { PickupComponent } from './components/shared/negocios/pickup/pickup.component';
 import { TractocamionesComponent } from './components/shared/negocios/tractocamiones/tractocamiones.component';
-import { TaxiUberComponent } from './components/shared/negocios/taxi-uber/taxi-uber.component';
+import { TaxiComponent } from './components/shared/negocios/taxi/taxi.component';
 import { AvisoComponent } from './components/shared/aviso/aviso.component';
 import { SiniestrosComponent } from './components/shared/anuncios/siniestros/siniestros.component';
 import { VidaComponent } from './components/shared/negocios/vida/vida.component';
 import { GmmComponent } from './components/shared/negocios/gmm/gmm.component';
 import { HogarComponent } from './components/shared/negocios/hogar/hogar.component';
-
+import { UberComponent } from './components/shared/negocios/uber/uber.component';
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'nosotros', component: AboutComponent},
@@ -40,7 +40,8 @@ export const ROUTES: Routes = [
     {path: 'negocios/motos', component: MotosComponent},
     {path: 'negocios/pickups', component: PickupComponent},
     {path: 'negocios/tractocamiones', component: TractocamionesComponent},
-    {path: 'negocios/taxi-uber', component: TaxiUberComponent},
+    {path: 'negocios/taxi', component: TaxiComponent},
+    {path: 'negocios/uber', component: UberComponent},
     {path: 'negocios/vida', component: VidaComponent},
     {path: 'negocios/gmm', component: GmmComponent},
     {path: 'negocios/hogar', component: HogarComponent},
