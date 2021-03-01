@@ -24,7 +24,7 @@
     "core-js": "^2.5.4",
     "primeicons": "^1.0.0",
     "primeng": "^7.1.1",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.23.0",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.5.2",
     "rxjs-observable": "0.0.7",
